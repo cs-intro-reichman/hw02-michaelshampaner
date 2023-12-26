@@ -4,6 +4,15 @@
  */
 public class InOrder {
 	public static void main (String[] args) {
-		//// Write your code here
+		int currentNum = (int)(Math.random() * 10 );
+		int newNum = currentNum;
+		do {
+			currentNum = newNum;
+			System.out.println(currentNum);
+			newNum = (int)(Math.random() * 10 );
+			
+		}
+		while (newNum >= currentNum);
+		
 	}
 }
