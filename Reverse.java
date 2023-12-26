@@ -11,7 +11,7 @@ public class Reverse {
 		if (lengthOfString % 2 == 1){
 			middleChar = inputS.charAt((lengthOfString - 1) / 2 );
 		} else {
-			middleChar = inputS.charAt(lengthOfString / 2 );
+			middleChar = inputS.charAt(lengthOfString / 2 - 1);
 		}
 		for (int n = lengthOfString - 1; n >= 0; n--)
 		{
