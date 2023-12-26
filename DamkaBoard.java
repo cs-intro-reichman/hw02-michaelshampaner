@@ -9,9 +9,12 @@ public class DamkaBoard {
                 System.out.print(" ");
             }
             for (int j = 0; j < n; j++) {
+		if (j == n-1) {
+			System.out.print("*");
+		}
                 System.out.print("* ");
             }
-            System.out.println(""); // Move this line inside the outer loop
+            System.out.println("");
         }
     }
 }
