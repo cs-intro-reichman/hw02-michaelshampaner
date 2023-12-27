@@ -19,14 +19,13 @@ public class OneOfEachStats {
 		int threeChildrenCount = 0;
 		int fourOrMore = 0;
 		int tempCount = 0;
-		int boyOrGirl = 0;
 		for (int i = 0; i < T; i++)
 		{
 			boolean isBoy = false;
 			boolean isGirl = false;
 			tempCount = 0;
 			while (!isBoy || !isGirl){ // while there is no either boy and girl
-				boyOrGirl = generator.nextInt() * 2;
+				int boyOrGirl = generator.nextInt(2);
 				tempCount += 1;// current number of children
 				if (boyOrGirl == 0){
 					isBoy = true;
