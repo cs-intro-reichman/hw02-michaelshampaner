@@ -18,10 +18,9 @@ public class OneOfEachStats1 {
 			boolean isBoy = false;
 			boolean isGirl = false;
 			tempCount = 0;
-			while (!isBoy || !isGirl){
-				boyOrGirl = (int)(Math.random() * 2 );
-				//overallCount += 1;
-				tempCount += 1;
+			while (!isBoy || !isGirl){ // while there is no either boy and girl
+				boyOrGirl = (int)(Math.random() * 2 );// two possible options: 0 for boy, 1 for girl
+				tempCount += 1;// current number of children
 				if (boyOrGirl == 0){
 					isBoy = true;
 				}
@@ -29,6 +28,7 @@ public class OneOfEachStats1 {
 					isGirl = true;
 				}
 			}
+			//adds 1 according to the size of family
 			overallCount += tempCount;
 			if (tempCount == 2){
 				twoChildrenCount += 1;
@@ -41,6 +41,7 @@ public class OneOfEachStats1 {
 			}
 		}
 		String mostCommon = "";
+		// check which group is the largest
 		if ((twoChildrenCount >= threeChildrenCount) && (twoChildrenCount >= fourOrMore)){
 			mostCommon = "2.";
 		}
@@ -50,7 +51,6 @@ public class OneOfEachStats1 {
 		else{
 			mostCommon = "4 or more.";
 		}
-		
 		System.out.println("Average: " + (double)overallCount / T + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + twoChildrenCount);
 		System.out.println("Number of families with 3 children: " + threeChildrenCount);
