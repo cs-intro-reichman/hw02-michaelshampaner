@@ -28,7 +28,7 @@ public class OneOfEachStats {
 			{ // while there is no either boy and girl
 				double boyOrGirl = generator.nextDouble();
 				tempCount += 1;// current number of children
-				if (boyOrGirl <= 0.5){
+				if (boyOrGirl < 0.5){
 					isBoy = true;
 				}
 				else{
