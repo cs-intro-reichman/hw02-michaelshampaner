@@ -12,16 +12,16 @@ public class OneOfEachStats1 {
 		int threeChildrenCount = 0;
 		int fourOrMore = 0;
 		int tempCount = 0;
-		int boyOrGirl = 0;
+		double boyOrGirl = 0;
 		for (int i = 0; i < T; i++)
 		{
 			boolean isBoy = false;
 			boolean isGirl = false;
 			tempCount = 0;
 			while (!isBoy || !isGirl){ // while there is no either boy and girl
-				boyOrGirl = (int)(Math.random() * 2 );// two possible options: 0 for boy, 1 for girl
+				boyOrGirl = (double)(Math.random());// two possible options: <0.5 for boy, >=0.5 for girl
 				tempCount += 1;// current number of children
-				if (boyOrGirl == 0){
+				if (boyOrGirl <0.5){
 					isBoy = true;
 				}
 				else{
