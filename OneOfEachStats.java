@@ -24,10 +24,11 @@ public class OneOfEachStats {
 			boolean isBoy = false;
 			boolean isGirl = false;
 			tempCount = 0;
-			while (!isBoy || !isGirl){ // while there is no either boy and girl
-				int boyOrGirl = generator.nextInt(2);
+			while (!isBoy || !isGirl)
+			{ // while there is no either boy and girl
+				double boyOrGirl = generator.nextDouble();
 				tempCount += 1;// current number of children
-				if (boyOrGirl == 0){
+				if (boyOrGirl <= 0.5){
 					isBoy = true;
 				}
 				else{
